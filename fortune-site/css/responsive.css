@@ -1,0 +1,511 @@
+/* レスポンシブデザイン */
+
+/* タブレット（768px以下） */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .site-title {
+        font-size: 2.5rem;
+    }
+
+    .site-subtitle {
+        font-size: 1rem;
+    }
+
+    .header {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+
+    .fortune-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .fortune-card {
+        padding: 25px;
+    }
+
+    .card-icon {
+        font-size: 3rem;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+    }
+
+    .card-button {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    .result-container {
+        padding: 30px 20px;
+    }
+
+    .result-title {
+        font-size: 1.8rem;
+    }
+
+    .result-content {
+        font-size: 1.1rem;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    /* コンポーネント調整 */
+    .card-selection {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .zodiac-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 12px;
+    }
+
+    .date-input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-select {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .omikuji-box {
+        padding: 30px 20px;
+    }
+
+    .omikuji-stick {
+        width: 150px;
+        height: 18px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 25px;
+    }
+}
+
+/* スマートフォン（480px以下） */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .site-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        padding: 25px 15px;
+        margin-bottom: 25px;
+    }
+
+    .fortune-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .fortune-card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .card-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .result-container {
+        padding: 25px 15px;
+    }
+
+    .result-title {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .result-content {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* コンポーネント調整 */
+    .card-selection {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .selection-card {
+        padding: 15px;
+    }
+
+    .card-number {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .card-name {
+        font-size: 0.85rem;
+    }
+
+    .zodiac-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .zodiac-card {
+        padding: 12px;
+    }
+
+    .zodiac-icon {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .zodiac-name {
+        font-size: 0.8rem;
+    }
+
+    .date-input-group {
+        gap: 10px;
+    }
+
+    .date-select {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .omikuji-box {
+        padding: 25px 15px;
+    }
+
+    .omikuji-stick {
+        width: 120px;
+        height: 16px;
+    }
+
+    .input-field {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .input-label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+
+    .modal-content {
+        width: 98%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .tooltip .tooltiptext {
+        width: 150px;
+        margin-left: -75px;
+        font-size: 0.8rem;
+    }
+}
+
+/* 極小画面（320px以下） */
+@media (max-width: 320px) {
+    .site-title {
+        font-size: 1.8rem;
+    }
+
+    .fortune-card {
+        padding: 15px;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-description {
+        font-size: 0.8rem;
+    }
+
+    .result-container {
+        padding: 20px 12px;
+    }
+
+    .result-title {
+        font-size: 1.4rem;
+    }
+
+    .result-content {
+        font-size: 0.9rem;
+    }
+
+    .card-selection {
+        grid-template-columns: 1fr;
+    }
+
+    .zodiac-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .omikuji-stick {
+        width: 100px;
+        height: 14px;
+    }
+}
+
+/* 大画面（1200px以上） */
+@media (min-width: 1200px) {
+    .container {
+        padding: 30px;
+    }
+
+    .site-title {
+        font-size: 3.5rem;
+    }
+
+    .site-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .header {
+        padding: 50px 0;
+        margin-bottom: 50px;
+    }
+
+    .fortune-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+    }
+
+    .fortune-card {
+        padding: 40px;
+    }
+
+    .card-icon {
+        font-size: 5rem;
+        margin-bottom: 25px;
+    }
+
+    .card-title {
+        font-size: 2rem;
+        margin-bottom: 18px;
+    }
+
+    .card-description {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .card-button {
+        padding: 15px 35px;
+        font-size: 1.2rem;
+    }
+
+    .result-container {
+        padding: 50px;
+    }
+
+    .result-title {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+    }
+
+    .result-content {
+        font-size: 1.3rem;
+        line-height: 2;
+        margin-bottom: 35px;
+    }
+
+    .card-selection {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 25px;
+    }
+
+    .zodiac-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+    }
+
+    .omikuji-box {
+        padding: 50px;
+    }
+
+    .omikuji-stick {
+        width: 250px;
+        height: 22px;
+    }
+}
+
+/* 横向き表示対応 */
+@media (orientation: landscape) and (max-height: 600px) {
+    .header {
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+    .site-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .fortune-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fortune-card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .result-container {
+        padding: 25px;
+    }
+
+    .result-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .result-content {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* プリント用スタイル */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .header,
+    .footer,
+    .nav-buttons,
+    .card-button,
+    .btn {
+        display: none;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    .result-container {
+        background: none;
+        border: 2px solid #000;
+        color: black;
+    }
+
+    .result-title {
+        color: black;
+    }
+
+    .result-content {
+        color: black;
+    }
+}
+
+/* 高コントラストモード対応 */
+@media (prefers-contrast: high) {
+    .fortune-card,
+    .result-container,
+    .selection-card,
+    .zodiac-card,
+    .omikuji-box {
+        border-width: 3px;
+        border-color: #ffd700;
+    }
+
+    .card-button,
+    .btn {
+        border: 2px solid #2d1b69;
+    }
+
+    .input-field {
+        border-width: 3px;
+    }
+}
+
+/* 動きを減らす設定 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .fortune-card:hover,
+    .selection-card:hover,
+    .zodiac-card:hover,
+    .btn:hover,
+    .card-button:hover {
+        transform: none;
+    }
+}

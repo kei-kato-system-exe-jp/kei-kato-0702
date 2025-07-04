@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星座占い - 神秘の占いサイト</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="site-title">星座占い</h1>
+            <p class="site-subtitle">星々の配置があなたの運勢を教えます</p>
+        </header>
+
+        <main class="main-content">
+            <div class="result-container">
+                <h2 class="result-title">あなたの星座を選択してください</h2>
+                <p class="instruction-text">生まれた月日に対応する星座をクリックしてください</p>
+                
+                <div id="zodiac-grid" class="zodiac-grid">
+                    <div class="zodiac-card" data-sign="牡羊座" data-period="3/21-4/19">
+                        <div class="zodiac-icon">♈</div>
+                        <div class="zodiac-name">牡羊座</div>
+                        <div class="zodiac-period">3/21-4/19</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="牡牛座" data-period="4/20-5/20">
+                        <div class="zodiac-icon">♉</div>
+                        <div class="zodiac-name">牡牛座</div>
+                        <div class="zodiac-period">4/20-5/20</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="双子座" data-period="5/21-6/21">
+                        <div class="zodiac-icon">♊</div>
+                        <div class="zodiac-name">双子座</div>
+                        <div class="zodiac-period">5/21-6/21</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="蟹座" data-period="6/22-7/22">
+                        <div class="zodiac-icon">♋</div>
+                        <div class="zodiac-name">蟹座</div>
+                        <div class="zodiac-period">6/22-7/22</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="獅子座" data-period="7/23-8/22">
+                        <div class="zodiac-icon">♌</div>
+                        <div class="zodiac-name">獅子座</div>
+                        <div class="zodiac-period">7/23-8/22</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="乙女座" data-period="8/23-9/22">
+                        <div class="zodiac-icon">♍</div>
+                        <div class="zodiac-name">乙女座</div>
+                        <div class="zodiac-period">8/23-9/22</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="天秤座" data-period="9/23-10/23">
+                        <div class="zodiac-icon">♎</div>
+                        <div class="zodiac-name">天秤座</div>
+                        <div class="zodiac-period">9/23-10/23</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="蠍座" data-period="10/24-11/22">
+                        <div class="zodiac-icon">♏</div>
+                        <div class="zodiac-name">蠍座</div>
+                        <div class="zodiac-period">10/24-11/22</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="射手座" data-period="11/23-12/21">
+                        <div class="zodiac-icon">♐</div>
+                        <div class="zodiac-name">射手座</div>
+                        <div class="zodiac-period">11/23-12/21</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="山羊座" data-period="12/22-1/19">
+                        <div class="zodiac-icon">♑</div>
+                        <div class="zodiac-name">山羊座</div>
+                        <div class="zodiac-period">12/22-1/19</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="水瓶座" data-period="1/20-2/18">
+                        <div class="zodiac-icon">♒</div>
+                        <div class="zodiac-name">水瓶座</div>
+                        <div class="zodiac-period">1/20-2/18</div>
+                    </div>
+                    
+                    <div class="zodiac-card" data-sign="魚座" data-period="2/19-3/20">
+                        <div class="zodiac-icon">♓</div>
+                        <div class="zodiac-name">魚座</div>
+                        <div class="zodiac-period">2/19-3/20</div>
+                    </div>
+                </div>
+
+                <div id="loading-section" class="loading-section" style="display: none;">
+                    <div class="loading"></div>
+                    <p>星々があなたの運勢を読み取っています...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="nav-buttons">
+                <button class="btn btn-secondary" onclick="goHome()">ホームに戻る</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/fortune-engine.js"></script>
+    <script src="js/zodiac.js"></script>
+</body>
+</html>
