@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-transparent;
+  }
+  
+  body {
+    @apply bg-mystic-gradient text-white;
+    font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* カスタムコンポーネントスタイル */
+  .fortune-card {
+    @apply bg-white/10 backdrop-blur-md border-2 border-gold-400/30 rounded-2xl p-6 text-center transition-all duration-300 cursor-pointer relative overflow-hidden;
+  }
+  
+  .fortune-card:hover {
+    @apply transform -translate-y-2 border-gold-400 shadow-2xl shadow-gold-400/30;
+  }
+  
+  .fortune-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gold-400/10 to-transparent opacity-0 transition-opacity duration-300;
+  }
+  
+  .fortune-card:hover::before {
+    @apply opacity-100;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-gold-400 to-gold-500 text-mystic-900 font-bold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold-400/30;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/20 backdrop-blur-md border-2 border-gold-400/50 text-white font-bold py-3 px-6 rounded-full transition-all duration-300 hover:bg-gold-400/20 hover:border-gold-400;
+  }
+  
+  .input-field {
+    @apply w-full p-3 border-2 border-gold-400/30 rounded-lg bg-white/10 backdrop-blur-md text-white placeholder-white/60 focus:border-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-400/30 transition-all duration-300;
+  }
+  
+  .result-container {
+    @apply bg-white/10 backdrop-blur-md border-2 border-gold-400/30 rounded-2xl p-8 text-center;
+  }
+  
+  .loading-spinner {
+    @apply w-10 h-10 border-4 border-gold-400/30 border-t-gold-400 rounded-full animate-spin;
+  }
+  
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .slide-up {
+    @apply animate-slide-up;
+  }
+  
+  .shimmer {
+    @apply animate-shimmer;
+  }
+  
+  .float {
+    @apply animate-float;
+  }
+}
+
+@layer utilities {
+  /* カスタムユーティリティ */
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold-400 to-gold-500 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .mystic-shadow {
+    box-shadow: 0 25px 50px -12px rgba(139, 69, 19, 0.25);
+  }
+  
+  .gold-glow {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 3Dトランスフォーム用のユーティリティ */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+/* カスタムアニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .fortune-card {
+    @apply p-4;
+  }
+  
+  .result-container {
+    @apply p-6;
+  }
+}
+
+@media (max-width: 480px) {
+  .fortune-card {
+    @apply p-3;
+  }
+  
+  .result-container {
+    @apply p-4;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    @apply py-2 px-4 text-sm;
+  }
+}
+
+/* スクロールバーのカスタマイズ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 215, 0, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 215, 0, 0.7);
+}
+
+/* フォーカス時のアウトライン */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-gold-400 ring-offset-2 ring-offset-mystic-900;
+}
+
+/* 選択時のハイライト */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: white;
+}
