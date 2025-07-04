@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/nextjs-fortune-site' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/nextjs-fortune-site/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/kei-kato-0702' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/kei-kato-0702/' : '',
 }
 
 module.exports = nextConfig
